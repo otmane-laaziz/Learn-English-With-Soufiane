@@ -1,0 +1,156 @@
+{% extends 'English_App/index2.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../Css/general-body.css">
+    <link rel="stylesheet" href="../Css/head.css">
+    <link rel="stylesheet" href="../Css/english course/englishCourseSecondBarre.css">
+    <link rel="stylesheet" href="../Css/after-head.css">
+    <link rel="stylesheet" href="../Css/english course/mainEnglishcourse.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.typekit.net/zsj8zhv.css">
+    <link rel="stylesheet" href="https://use.typekit.net/cgq4uuv.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link  rel="stylesheet" type="text/css"  href="{% static '/css/test.css' %}">
+    <link  rel="stylesheet" type="text/css"  href="{% static '/images' %}">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #ffa500;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type=submit]:hover {
+  background-color: #ffa500;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col-25 {
+  float: left;
+  width: 45%;
+  margin-top: 6px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#contactmeBody{
+    background-color: rgb(212,212,212);
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body id="contactmeBody">
+
+
+<div class="container">
+  <form action="{% url 'my_form_view' %}" method="post" >
+{% csrf_token %}
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">First Name</label>
+      {{postform.first_name}}
+      
+    </div>
+   
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Last Name</label>
+      {{postform.last_name}}
+    </div>
+    
+</div>
+  <div class="row">
+    <div class="col-25">
+      <label for="emailaddress">Email address</label>
+      {{postform.email_address}}
+    </div>
+    
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="phonenumber">Phone number</label>
+      {{postform.phone_number}}
+    </div>
+   
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Subject</label>
+      {{postform.body}}
+    </div>
+  </div>  
+  <br>
+  <div class="row">
+    <input type="submit" value="Submit">
+  </div>
+  </form>
+</div>
+
+
+
+</body>
+</html>
+{% endblock %}

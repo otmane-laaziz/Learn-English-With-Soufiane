@@ -1,0 +1,223 @@
+{% extends 'English_App/index2.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Kaliim online education
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link  rel="stylesheet" type="text/css"  href="{% static '/css/test.css' %}">
+        <link  rel="stylesheet" type="text/css"  href="{% static '/images' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+       
+        <style>
+
+
+            .footermain{
+                border-radius: 15px;
+            }
+
+            #mainbody{
+                background-color: rgb(212,212,212);
+
+            }
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: white;
+              
+            }
+            
+            li {
+              float:left;
+            }
+            
+            li a {
+              display: block;
+              color: orange;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+              font-size: 23px;
+              font-family: "Sofia", sans-serif;
+            
+              text-shadow: 3px 3px 3px #ababab;
+              
+ 
+  
+              
+ 
+             
+            }
+            
+            li a:hover {
+              background-color: gray;
+            }
+            
+
+
+            #demo{
+                width: 90%;
+                height:400px;
+                margin-left: 40px;
+                margin-bottom: 20px;
+            }
+
+
+            .homecontainer{
+                background-color: rgb(234, 234, 234);
+      box-shadow: -3px -3px 15px;
+      
+      height: 90%;
+      border-radius: 15px;
+    
+      display:flex;
+      
+        flex-direction: column;
+    
+     
+      align-items: center;
+      padding-bottom: 50px;
+      padding: 10px; /* Example padding */
+      box-sizing: border-box;
+      margin-top:10px;
+      margin-left: 2.5%;
+      margin-right: 2.5%;
+      margin-bottom: 15px;
+      width: 90%;
+      flex-wrap: wrap;
+            }
+    
+            </style>
+
+
+     
+    </head>
+
+<body id="mainbody" >
+
+   
+
+     <!--
+     <div> 
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">English courses</a></li>
+            <li><a href="#contact">Podcast</a></li>
+            <li><a href="#about">I am the promoter</a></li>
+            <li><a href="#about">Blog</a></li>
+            <li><a href="#about">Coaching</a></li>
+            <li><a href="#about" id="la">Contact me</a></li>
+            <li><a href="#about" id="la">About us</a></li>
+            <li><a href="#about" id="la">register</a></li>
+            <li><a href="#about" id="la">log in</a></li>
+          </ul>
+    </div>
+
+   -->
+
+
+
+
+
+
+<div class="container" id="homecontainer">
+
+<div class="main">
+    <video src="{% static '/videos/room.mp4' %}" autoplay loop muted plays-inline class="video-background"></video>
+
+<div class="picture-bespeacker">
+    <div class="bespeacker">Be a better speaker</div>    
+    <div class="picture">
+        <img class="picturesrc" src="{% static '/images/Capture2.PNG' %}" alt="">
+        
+    </div>
+    <div class="bespeacker-arabic">كن متحدثًا جيدا</div>
+</div>
+
+     <!--
+        The end of navbar
+     -->
+<div class="storys">
+    <div class="story" style="cursor: pointer;"><video class="video-story" src="{% static '/videos/InShot_20220121_122517529.mp4' %}"  autoplay loop muted></video></div>
+    <div class="story" style="cursor: pointer;"><video class="video-story" src="{% static 'videos/InShot_20220125_161919878.mp4' %}" autoplay loop muted></video></div>
+    <div class="story" style="cursor: pointer;"><video class="video-story" src="{% static 'videos/WhatsApp Video 2024-02-27 at 20.46.54.mp4' %}" autoplay loop muted></video></div>
+    <div class="story" style="cursor: pointer;"><video class="video-story" src="{% static '/videos/InShot_20220121_122517529.mp4' %}" autoplay loop muted></video></div>
+</div>
+
+<div class="lesson-story-name">
+    <div class="lesson-name">
+        Speaking
+    </div>
+    <div class="lesson-name">
+        Communication
+    </div>
+    <div class="lesson-name">
+        Information
+    </div>
+    <div class="lesson-name">
+        Skills
+    </div>
+</div>
+
+<div class="pictures-storys">
+                
+    <div class="picture-story story1">
+        
+        <img  class="image1" src="{% static '/images/IMG_7931.JPG' %}" alt="">
+    </div>
+    <div class="picture-story story2">
+       
+        <img  class="image1" src="{% static '/images/IMG_7933.JPG' %}" alt="">
+    </div>
+    <div class="picture-story story3">
+        
+        <img  class="image1" src="{% static '/images/IMG_7937.JPG' %}" alt="" >
+    </div>
+</div>
+<div class="pictures-storys2">
+    <div class="picture-story story6">
+        
+        <img  class="image1" src="{% static '/images/IMG_7937.JPG' %}" alt="">
+    </div>
+    <div class="picture-story story4">
+        
+        <img  class="image1" src="{% static '/images/IMG_7939.JPG' %}" alt="">
+    </div>
+    <div class="picture-story story5">
+       
+        <img  class="image1" src="{% static '/images/IMG_7980.JPG' %}" alt="">
+    </div>
+</div>
+
+<!--    Footer -->
+<div class="footermain"  class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-youtube"></a>
+    <a href="#" class="fa fa-instagram"></a>
+  
+    
+    </div>
+    
+</div>
+
+
+
+
+</div>
+    
+    
+    </body>
+    </html>
+
+{% endblock %}

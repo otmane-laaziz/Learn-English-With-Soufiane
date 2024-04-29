@@ -1,0 +1,95 @@
+{% extends 'English_App/index2.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="../Css/general-body.css">
+        <link rel="stylesheet" href="../Css/head.css">
+        <link rel="stylesheet" href="../Css/english course/englishCourseSecondBarre.css">
+        <link rel="stylesheet" href="../Css/after-head.css">
+        <link rel="stylesheet" href="../Css/english course/mainEnglishcourse.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://use.typekit.net/zsj8zhv.css">
+        <link rel="stylesheet" href="https://use.typekit.net/cgq4uuv.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+        <link  rel="stylesheet" type="text/css"  href="{% static '/css/test.css' %}">
+        <link  rel="stylesheet" type="text/css"  href="{% static '/images' %}">
+    
+    </head>
+    <body >
+        
+       
+        <div class="main-container">
+            
+            <div class="container">
+                <div class="category-video">
+                    <div class="category">
+                        <a class="text-category bactextcat" style="text-decoration: underline; text-underline-offset: 10px; background-color: rgb(150, 150, 150);" >
+                            Bac
+                        </a>
+                        <hr style="background-color: black;
+                                    width: 100%;
+                                    height: 3px;
+                                    border-style: solid;">
+                        <a href="englishCoursecommunication.html" class="text-category" style="text-decoration: none;">
+                            English For <abbr title="communication" style="text-decoration: none;" class="comunication"></abbr>
+                        </a>
+                        <hr style="background-color: black;
+                        width: 100%;
+                        height: 3px;
+                        border-style: solid;">
+
+                    </div>
+                   
+                <br>
+                <br>
+                <br>
+  
+                    <div style="display: flex;
+                                flex-direction: column;
+                                margin-left: 0;
+                                width:100%;margin-top:90px">
+                           
+                             
+                                <div class="videoparent">
+                                  
+                                    <div class="video">
+                                        <img src="{% static '/images/london2.jpg' %}" class="myvideo">
+                                        <div class="imgandtitle" style="display: flex;
+                                                                        flex-direction: row;
+                                                                        align-items: center;
+                                                                        border: 2px solid rgb(0, 0, 0);
+                                                                        border-radius: 15px;
+                                                                        background-color: rgb(213, 209, 203);">
+                                            <img src="{% static '/images/capture2.PNG' %}" width="80px" height="80px" class ="picture" style="border-radius: 50px; margin-left: 40px;">
+                                            <div class="videotitle"> <h4 >meo meo</h4></div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                        
+
+                            </div>
+                       
+                       
+                        
+                        
+
+
+
+
+                      
+                            
+            </div>
+        </div>
+
+    </body>
+</html>
+{% endblock %}

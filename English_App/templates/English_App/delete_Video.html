@@ -1,0 +1,42 @@
+{% extends 'English_App/index2.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" type="text/css"  href="{% static '/css/test.css' %}">
+    <link  rel="stylesheet" type="text/css"  href="{% static '/images' %}">
+    <title>Document</title>
+
+<style>
+
+#deletevideobody{
+    background-color: rgb(212,212,212);
+}
+</style>
+</head>
+<body id="deletevideobody">
+<div class="container">
+	
+
+
+		<form method="POST">
+            {% csrf_token %}
+            <h5 >Are you sure you want to delete "{{deleteVideo.caption}}"</h5>
+            <input class="btn btn-lg btn-danger" action="home" type="submit" value="yes">
+            <a href="{% url 'upload_video'  %}" class="btn btn-lg btn-info ml-2"> Cancel</a>
+          
+
+
+        </form>
+
+			
+</div>
+</body>
+</html>
+{% endblock %}

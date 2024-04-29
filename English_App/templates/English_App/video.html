@@ -1,0 +1,245 @@
+{% extends 'English_App/index2.html' %}
+
+{% load static %}
+{% block content %}
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+
+<link  rel="stylesheet" type="text/css"  href="{% static '/css/test.css' %}">
+<link  rel="stylesheet" type="text/css"  href="{% static '/images' %}">
+
+<title>Video page</title>
+
+
+<style>
+  a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 3px 6px;
+  }
+  
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .previous {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  .next {
+    background-color: orange;
+    color: white;
+  }
+  
+  .round {
+    border-radius: 15%;
+  }
+#nextpreviousbuttons{
+  margin-left: 38%;
+}
+
+
+
+
+
+  #addvideocontainer {
+    background-color: rgb(234, 234, 234);
+    box-shadow: -3px -3px 15px;
+    
+    height: auto;
+    border-radius: 15px;
+  
+    flex-wrap: wrap;
+    
+    align-items: center;
+    padding-bottom: 50px;
+    padding: 10px; /* Example padding */
+    box-sizing: border-box;
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    width: 90%;
+   
+    display: flex;
+
+
+
+    
+    
+  
+    
+    align-items: center;
+    box-sizing: border-box;
+  
+}
+
+/* Additional styles for content inside the container */
+#addvideocontainer h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+#addvideocontainer p {
+    font-size: 16px;
+    color: #666;
+}
+
+#videocardid {
+    
+  flex-direction: row;
+  flex-wrap:wrap;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  width: 20px;
+    height: 50px;
+
+  border-radius: 18px;
+  background: gray;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+  margin:20px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  display: grid;
+ 
+
+ 
+}
+
+#videocardid{
+  
+  padding: 16px;
+  height:200px;
+  width: 230px;
+  text-align: center;
+  display: flex;
+}
+#videouploadcontainer{
+ margin-left: 30px;
+ margin-top: 100px;
+float: left;
+}
+
+.videosize{
+  width: 200px;
+  height: 100px;
+}
+ #watchvideo{
+  background-color: white;
+ }
+</style>
+</head>
+
+<body id="videobody">
+
+  <!--
+
+        <div id="video" class="container" id="videouploadcontainer">
+        
+        <div class="mt-5">
+        <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if user.is_authenticated  and user.is_superuser%}
+        {{video_form.as_table}}
+        <button class="btn-primary"  >Upload here</button>
+        {% endif %}
+        </form>
+        </div >
+         <br>
+         <br>
+      
+    
+     
+        {% for x in video %}
+        <div class="card" id="videocardid">
+          
+          
+            <video class="videosize" controls="controls" >
+                <source src="{{x.video.url}}" type="video/mp4" />
+                </video>
+            <div class="card-body">
+              
+              <p class="card-text">{{x.caption}}</p>
+              
+              {% if user.is_authenticated and user.is_staff and user.is_superuser%}
+              <a class="btn btn-sm btn-danger" id="videodeletebutton" href="{% url 'deleteVideo' x.id %}"><span class="glyphicon glyphicon-trash"></span>Delete</a>
+              {% endif %}
+              
+            </div>
+          </div>
+          
+        {% endfor %}
+-->
+
+
+<div class="large-container" id="addvideocontainer">
+
+  <div class="mt-5">
+    <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% if user.is_authenticated  and user.is_superuser%}
+    {{video_form.as_table}}
+    <button class="btn-primary"  >Upload here</button>
+    {% endif %}
+    </form>
+    </div >
+     <br>
+     <br>
+
+
+
+
+<div>
+
+     {% for x in video %}
+        <div class="card" id="videocardid">
+          
+          
+            <video class="videosize" controls="controls" >
+                <source src="{{x.video.url}}" type="video/mp4" />
+                </video>
+            <div class="card-body">
+              
+              <p class="card-text">{{x.caption}}</p>
+              
+              {% if user.is_authenticated and user.is_staff and user.is_superuser%}
+              <a class="btn btn-sm btn-danger" id="videodeletebutton" href="{% url 'deleteVideo' x.id %}"><span class="glyphicon glyphicon-trash"></span>Delete</a>
+              {% endif %}
+              
+            </div>
+          </div>
+          
+        {% endfor %}
+
+      </div>
+
+      <div id="nextpreviousbuttons">
+        <a href="#" class="previous">&laquo; Previous</a>
+        <a href="#" class="next">Next &raquo;</a>
+        
+        <a href="#" class="previous round">&#8249;</a>
+        <a href="#" class="next round">&#8250;</a>  
+       </div>
+   
+    
+    </div>
+     </div>
+
+   
+
+
+          
+</body>
+</html>
+{% endblock  %} 

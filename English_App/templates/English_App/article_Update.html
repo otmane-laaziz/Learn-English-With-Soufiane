@@ -1,0 +1,61 @@
+
+
+{% extends 'English_App/index2.html' %}
+
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" type="text/css"  href="{% static '/css/test.css' %}">
+        <link  rel="stylesheet" type="text/css"  href="{% static '/images' %}">
+    <title>Document</title>
+
+    <style>
+        #updatearticlebody{
+            background-color: rgb(212,212,212);
+        }
+        #articleupdatecontainer{
+            background-color: rgb(234, 234, 234);
+            box-shadow: -3px -3px 15px;
+            
+            height: 90%;
+            border-radius: 15px;
+          
+            display:flex;
+            
+              
+          
+           
+            align-items: center;
+            padding-bottom: 50px;
+            padding: 10px; /* Example padding */
+            box-sizing: border-box;
+            margin-top:10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 15px;
+            width: 95%;
+            flex-wrap: wrap; 
+        }
+        #updatearticlesubmitbutton{
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body  id="updatearticlebody">
+<div class="container" id="articleupdatecontainer">
+    <form method="POST">
+        {% csrf_token %}
+        {{form_update_article.media}}
+        {{form_update_article.as_p}}
+        <input type="submit" class="btnbtn-primary" id="updatearticlesubmitbutton" value="submit">
+    </form>
+</div>
+</body >
+</html>
+{% endblock %}

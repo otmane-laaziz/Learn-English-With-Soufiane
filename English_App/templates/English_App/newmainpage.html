@@ -1,0 +1,402 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Kaliim online education
+        </title>
+       
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css" rel="stylesheet">
+    <link  rel="stylesheet" type="text/css"  href="{% static '/css/test.css' %}">
+    <link  rel="stylesheet" type="text/css"  href="{% static '/images' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Noto+Naskh+Arabic:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+
+        <style>
+
+            .after-head{   
+                display: flex;
+                flex-direction: column;
+            }
+
+            .body{
+                margin: 0;
+                font-family:'Courier New', Courier, monospace;
+                display: flex;
+                flex-direction: column;
+                margin-top: 130px;
+            }
+
+            .head{
+                position: fixed;
+                right: 0;
+                left: 0;
+                top: 0;
+                background-color: rgb(242, 242, 242);
+                height: 129px;
+                color: rgb(255, 255, 255);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                
+            }
+            .logo-kaliim{
+                color: rgb(0, 0, 0);
+                font-size: 60px;
+                font-weight: 700;
+                letter-spacing: 3px;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-left: 20px;
+            }
+            
+            .Ka{
+                color: rgb(255, 191, 0);
+                font-size: 90px;
+                font-weight: 800;
+                cursor: pointer;
+                transition: .3s;
+            }
+            .Ka:hover{
+                font-size: 100px;
+            }
+            
+            
+            
+            
+            /*second barre*/
+            .second-barre{
+                width: 100%;
+                height: 130px;
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                justify-content: center;
+            }
+            .second-barre2{
+                width: 85%;
+                height: 130px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 700;
+            }
+            
+            .element-second-barre{
+                text-decoration: underline rgba(255, 191, 0, 0);
+                text-underline-offset: 0;
+                color:black;
+                font-size: 40px;
+                cursor: pointer;
+                transition: .3s;
+            }
+            .element-second-barre:hover{
+                text-decoration: underline rgb(255, 191, 0);
+                text-underline-offset: 15px;
+                color:rgb(255, 191, 0);
+                font-size: 45px;
+            }
+
+            .main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+            .video-background{
+                width: 100%;
+            }
+            
+            
+            .picture-bespeacker{
+                width: 90%;
+                height: 800px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 100px;
+                margin-top: 200px;
+                margin-bottom: 200px;
+            }
+            
+            .picturesrc{
+                width: 90%;
+                border-radius: 40px;
+                border: none;
+                cursor: pointer;
+                transition: .3s;
+            }
+            .picturesrc:hover{
+                border-radius: 10px;
+                box-shadow: 0 0 30px grey;
+            }
+            
+            .bespeacker,
+            .bespeacker-arabic{
+                font-size: 150px;
+            }
+            
+            
+            .bespeacker-arabic{
+                font-family: Noto Naskh Arabic;
+                font-weight: 500;
+                direction: rtl;
+            }
+            .bespeacker{
+                font-family: fredoka;
+                font-weight: 500;
+            }
+            
+            .storys{
+                width: 95%;
+                height: 920px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 50px;
+                gap: 2%;
+            }
+            
+            .story{
+                height: 100%;
+                flex: 1;
+                border-radius: 30px;
+                background-color: rgb(0, 0, 0);
+                display: flex;
+                justify-content: center;
+                box-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
+                transition: .3s;
+            }
+            
+            .story:hover{
+                box-shadow: 1px 1px 10px black;
+            }
+            
+            .video-story{
+                width: 100%;
+            }
+            
+            .create-story{
+                font-size: 150px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: 900;
+                position: absolute;
+                top: 4200px;
+                right: 1000px;
+                z-index: -1;
+            }
+            
+            .lesson-story-name{
+                margin-top: 10px;
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+                font-size: 50px;
+                font-family: fredoka;
+                font-weight: 500;
+            }
+            .lesson-name{
+                cursor: pointer;
+                color: black;
+                text-decoration: underline rgba(255, 191, 0, 0);
+                text-underline-offset: 0px;
+                transition: .3s;
+            }
+            .lesson-name:hover{
+                color: rgb(255, 191,0);
+                text-decoration: underline rgb(255, 191,0);
+                text-underline-offset: 20px;
+            }
+            
+            
+            
+            .pictures-storys{
+                width: 90%;
+                height: 1000px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 2%;
+                margin-top: 300px;
+                margin-bottom: 0;
+            }
+            .pictures-storys2{
+                width: 95%;
+                height: 1000px;
+                display: flex;
+                flex-direction: row;
+                gap: 2%;
+                margin-bottom: 500px;
+            }
+            
+            .create-story{
+                color: black;
+                animation: changeOpacity 6s;
+                animation-iteration-count: infinite;
+            }
+            
+            @keyframes changeOpacity {
+                0% { opacity: .05;
+                     color: rgb(255, 191,0); }
+                25% { opacity: 1;
+                      color: black;}
+                50%{ opacity: .05;
+                      color: rgb(0, 0, 0);}
+                75%{ opacity: 1;
+                      color:rgb(255, 191,0);}
+                100%{ opacity: .05;
+                      color: rgb(255, 191,0);}
+            }
+            
+            
+            .picture-story{
+                width: 33%;
+                border-radius: 5px;
+                margin-bottom: 0;
+            }
+            
+            .story1{
+                margin-top: 250px;
+            }
+            .story2{
+                margin-top: 100px;
+            }
+            .story3{
+                margin-top: 400px;
+            }
+            .story4{
+                position: absolute;
+                top: 5200px;
+            }
+            
+            .story5{
+                position: absolute;
+                left: 1700px;
+            }
+            
+            .image1{
+                width: 100%;
+                border-radius: 50px;
+            }
+        </style>
+    </head>
+    <body class= "body">
+        <div class="head">
+            <div class="logo-kaliim">
+                    <strong class="Ka">Ka</strong><span class ="liim">liim</span> <strong class="academy">Academy</strong>
+            </div>
+        </div>
+
+
+        <div class="after-head">
+
+            <div class="second-barre">
+
+                <div class="second-barre2">
+                   
+                    <li><a href="{% url 'index' %}"><span class="glyphicon glyphicon-education"></span>English courses</a></li>
+                    <div class="element-second-barre">
+                        Podcast
+                    </div>
+                    <div class="element-second-barre">
+                        I am the promoter
+                    </div>
+                    <div class="element-second-barre">
+                        Blog
+                    </div>
+                    <div class="element-second-barre">
+                        Coaching
+                    </div>
+                    <div class="element-second-barre">
+                        Contact me
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="main">
+                <video src="{% static '/videos/room.mp4' %}" autoplay loop muted plays-inline class="video-background"></video>
+            
+            <div class="picture-bespeacker">
+                <div class="bespeacker">Be a better speaker</div>    
+                <div class="picture">
+                    <img class="picturesrc" src="{% static '/images/Capture2.PNG' %}" alt="">
+                    
+                </div>
+                <div class="bespeacker-arabic">كن متحدثًا جيدا</div>
+            </div>
+
+
+            <div class="storys">
+                <div class="story" style="cursor: pointer;"><video class="video-story" src="{% static '/videos/InShot_20220121_122517529.mp4' %}"  autoplay loop muted></video></div>
+                <div class="story" style="cursor: pointer;"><video class="video-story" src="{% static 'videos/InShot_20220125_161919878.mp4' %}" autoplay loop muted></video></div>
+                <div class="story" style="cursor: pointer;"><video class="video-story" src="{% static 'videos/WhatsApp Video 2024-02-27 at 20.46.54.mp4' %}" autoplay loop muted></video></div>
+                <div class="story" style="cursor: pointer;"><video class="video-story" src="{% static '/videos/InShot_20220121_122517529.mp4' %}" autoplay loop muted></video></div>
+            </div>
+            <div class="lesson-story-name">
+                <div class="lesson-name">
+                    Speaking
+                </div>
+                <div class="lesson-name">
+                    Communication
+                </div>
+                <div class="lesson-name">
+                    Information
+                </div>
+                <div class="lesson-name">
+                    Skills
+                </div>
+            </div>
+
+            <div class="pictures-storys">
+                
+                <div class="picture-story story1">
+                    
+                    <img  class="image1" src="{% static '/images/IMG_7931.JPG' %}" alt="">
+                </div>
+                <div class="picture-story story2">
+                   
+                    <img  class="image1" src="{% static '/images/IMG_7933.JPG' %}" alt="">
+                </div>
+                <div class="picture-story story3">
+                    
+                    <img  class="image1" src="{% static '/images/IMG_7937.JPG' %}" alt="">
+                </div>
+            </div>
+            <div class="pictures-storys2">
+                <div class="picture-story story6">
+                    
+                    <img  class="image1" src="{% static '/images/IMG_7937.JPG' %}" alt="">
+                </div>
+                <div class="picture-story story4">
+                    
+                    <img  class="image1" src="{% static '/images/IMG_7939.JPG' %}" alt="">
+                </div>
+                <div class="picture-story story5">
+                   
+                    <img  class="image1" src="{% static '/images/IMG_7980.JPG' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

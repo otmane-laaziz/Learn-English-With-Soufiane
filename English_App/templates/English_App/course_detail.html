@@ -1,0 +1,81 @@
+{%extends  'English_App/index2.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" type="text/css"  href="{% static '/css/test.css' %}">
+    <link  rel="stylesheet" type="text/css"  href="{% static '/images' %}">
+    <title>Display each post</title>
+
+
+    <style>
+
+        #bodycoursedetail1{
+            background-color: rgb(212, 212, 212);
+        }
+
+        .large-container {
+            background-color: rgb(234, 234, 234);
+            box-shadow: -3px -3px 15px;
+            
+            height: 90%;
+            border-radius: 15px;
+          
+            display:flex;
+            
+              
+          
+           
+            align-items: center;
+            padding-bottom: 50px;
+            padding: 10px; /* Example padding */
+            box-sizing: border-box;
+            margin-top:10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 15px;
+            width: 80%;
+            flex-wrap: wrap;
+           
+          
+        }
+        
+        /* Additional styles for content inside the container */
+        .large-container h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        
+        .large-container p {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body id="bodycoursedetail1">
+
+
+
+    <div class="large-container">
+   
+    <article id="coursediv2">
+        <h2>{{eachcourse.courseName}} </h2>
+        <br>
+     
+    
+    <h4>{{eachcourse.courseBody|safe}}</h4>
+</article>
+</div>
+ 
+
+
+
+
+
+</body>
+</html>
+{% endblock %}

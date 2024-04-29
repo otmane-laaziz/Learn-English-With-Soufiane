@@ -1,0 +1,48 @@
+{% extends 'English_App/index2.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../Css/general-body.css">
+        <link rel="stylesheet" href="../Css/head.css">
+        <link rel="stylesheet" href="../Css/after-head.css">
+        <link rel="stylesheet" href="../Css/english course/englishCourseSecondBarre.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link  rel="stylesheet" type="text/css"  href="{% static '/css/test.css' %}">
+        <link  rel="stylesheet" type="text/css"  href="{% static '/images' %}">
+
+    <style>
+        #deletearticlebody{
+            background-color: rgb(212,212,212);
+        }
+
+        #deletearticlebutton{
+            background-color: orange;
+        }
+    </style>
+    </head>
+    <body id="deletearticlebody">
+<div class="container">
+	
+
+
+		<form method="POST">
+            {% csrf_token %}
+            <h5 >Are you sure you want to delete "{{obj.title}}"</h5>
+            <input class="btn btn-lg btn-danger" id="deletearticlebutton" action="home" type="submit" value="yes">
+            <a href="{% url 'displayUsersArticaleList'  %}" class="btn btn-lg btn-info ml-2"> Cancel</a>
+          
+
+
+        </form>
+
+			
+</div>
+</body>
+</html>
+{% endblock %}

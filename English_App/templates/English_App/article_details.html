@@ -1,0 +1,71 @@
+{%extends  'English_App/index2.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" type="text/css"  href="{% static '/css/test.css' %}"> 
+    <title>Display each post</title>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+      <style>
+        #articledetailcontainer{
+          background-color: rgb(234, 234, 234);
+          box-shadow: -3px -3px 15px;
+          
+          height: 90%;
+          border-radius: 15px;
+        
+          display:flex;
+          
+            
+        
+         
+          align-items: center;
+          padding-bottom: 50px;
+          padding: 10px; /* Example padding */
+          box-sizing: border-box;
+          margin-top:10px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 15px;
+          width: 80%;
+          flex-wrap: wrap;
+        }
+        #bodyarticledetail{
+          background-color: rgb(212,212,212);
+          word-wrap    : break-word;
+            overflow-wrap: break-word;
+        }
+      </style>
+</head>
+<body id="bodyarticledetail">
+   <div class="container" id="articledetailcontainer">
+    <div id="articlediv2">
+        <h2>Author name : {{articledetails.author}} </h2>
+        <br>
+        <br>
+     <h3 id="articletitle"><strong>{{articledetails.title}}</strong></h3><br>
+     <br>
+    
+    <h4>{{articledetails.body | safe}}</h4>
+
+  
+
+    
+      
+       
+              
+       
+       
+       
+</div>
+</div>
+   
+</body>
+</html>
+{% endblock %}
+

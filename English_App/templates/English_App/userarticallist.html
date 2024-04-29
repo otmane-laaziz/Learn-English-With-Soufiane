@@ -1,0 +1,143 @@
+{% extends 'English_App/index2.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" type="text/css"  href="{% static '/css/test.css' %}"> 
+    <title>Document</title>
+
+
+
+
+<style>
+    a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 3px 6px;
+      }
+      
+      a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      .previous {
+        background-color: #f1f1f1;
+        color: black;
+      }
+      
+      .next {
+        background-color: orange;
+        color: white;
+      }
+      
+      .round {
+        border-radius: 15%;
+      }
+    #nextpreviousbuttons{
+      margin-left: 38%;
+    }
+
+
+
+    #useraticlelistcontainer{
+        background-color: rgb(234, 234, 234);
+        box-shadow: -3px -3px 15px;
+        
+        height: 90%;
+        border-radius: 15px;
+      
+        display:flex;
+        
+          
+      
+       
+        align-items: center;
+        padding-bottom: 50px;
+        padding: 10px; /* Example padding */
+        box-sizing: border-box;
+        margin-top:10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 15px;
+        width: 95%;
+        flex-wrap: wrap; 
+        padding-top: 10px;
+    }
+    #bodyarticlelist{
+        background-color: rgb(212,212,212);
+      }
+      
+</style>
+</head>
+<body id="bodyarticlelist">
+   
+       <!--
+        <form method="get">
+            {% csrf_token %}
+            {{myFilter.as_p}}
+            <button class="btn btn-primary" type="submit">Search</button>
+
+        </form>
+   -->
+     <div class="container" id="useraticlelistcontainer">  
+        <table class="table">
+            <tr>
+                <th>Artical Id</th>
+                <th>Artical Name</th>
+                <th>Author Name</th>
+                <th>Article Details</th>
+                {% if user.is_authenticated  and user.is_superuser%}
+                <th>Edit</th>
+                <th>Remove</th>
+                {% endif %}
+                </tr>
+        {% for x in usersposts %}
+      
+        <tr>
+            <td>{{x.id}}</td>
+            <td>{{x.title}}</td>
+            <td>{{x.author}}</td>
+            <td><a class="btn btn-sm btn-info" href="{% url 'articledetails'  x.id %}">Details</a></td>
+            {% if user.is_authenticated  and user.is_superuser%}
+            <td><a class="btn btn-sm btn-info" href="{% url 'updateUserArticle' x.id %}">Update</a></td>
+            <td><a class="btn btn-sm btn-danger" href="{% url 'deletePosts' x.id %}">Delete</a></td>
+            {% endif %}
+								
+        </tr>
+       
+        <br>
+      
+    
+        {% endfor %}
+
+       
+
+  
+    </div>
+
+
+
+  
+</div>
+
+
+
+<div id="nextpreviousbuttons">
+    <a href="#" class="previous">&laquo; Previous</a>
+    <a href="#" class="next">Next &raquo;</a>
+    
+    <a href="#" class="previous round">&#8249;</a>
+    <a href="#" class="next round">&#8250;</a>  
+   </div>
+  
+  
+  </div>
+</body>
+
+</html>
+{% endblock %}

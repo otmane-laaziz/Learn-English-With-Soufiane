@@ -1,0 +1,102 @@
+{%  extends 'English_App/index2.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" type="text/css"  href="{% static '/css/test.css' %}">
+    <title>Users posts</title>
+
+<style>
+   #displayeachmessagebody{
+    background-color: rgb(212,212,212);
+   }
+  #displayeachmessagecontainer{
+    background-color: rgb(234, 234, 234);
+    box-shadow: -3px -3px 15px;
+    
+    height: 90%;
+    border-radius: 15px;
+  
+    display:flex;
+    
+      
+  
+   
+    align-items: center;
+    padding-bottom: 50px;
+    padding: 10px; /* Example padding */
+    box-sizing: border-box;
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    width: 95%;
+    flex-wrap: wrap;
+  }
+    
+</style>
+</head>
+
+    
+
+<body id="displayeachmessagebody">
+	
+
+				
+				
+					<div class="container" id="displayeachmessagecontainer">
+                        
+                           
+                           
+                            
+							
+					
+
+					
+						<div>
+                               
+                            <h4><strong>First Name :</strong> {{displayeachmessage.first_name}}</h4>
+
+                        </div>
+                        <div>
+                            
+                            <h4><strong>Last Name :</strong> {{displayeachmessage.last_name}}</h4>
+                        </div>
+                           <div>
+                            <h4><strong>Email : </strong>{{displayeachmessage.email_address}}</h4>
+                        </div> 
+                        <Div>
+                            <h4><strong>Phone Number :</strong> {{displayeachmessage.phone_number}}</h4>
+                        </Div>
+                        <div>
+                            <h4><strong>Message : </strong></h4>
+                        </div>
+
+                        <br>
+                        <div> 
+                            
+                            <h4>{{displayeachmessage.body | safe}}</h4>
+
+                        </div> 
+                          
+                               
+								
+                               
+                                
+								
+							
+					
+						
+					
+				
+		</div>
+
+
+
+</body>
+</html>
+{% endblock content %}

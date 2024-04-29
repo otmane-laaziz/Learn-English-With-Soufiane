@@ -1,0 +1,58 @@
+{% extends 'English_App/index2.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../Css/general-body.css">
+        <link rel="stylesheet" href="../Css/head.css">
+        <link rel="stylesheet" href="../Css/after-head.css">
+        <link rel="stylesheet" href="../Css/english course/englishCourseSecondBarre.css">
+        <link rel="stylesheet" href="../Css/coaching/main-coaching.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link  rel="stylesheet" type="text/css"  href="{% static '/css/test.css' %}">
+        <link  rel="stylesheet" type="text/css"  href="{% static '/images' %}">
+
+
+        <style>
+           #coachingbody{
+            background-color:rgb(212,212,212);
+           }
+            .stud{
+                font-size: 100px;
+                margin-left: 300px;
+            }
+            .alone{
+                font-size: 100px;
+                direction: rtl;
+                margin-right: 300px;
+            }
+        </style>
+    </head>
+    <body id="coachingbody">
+        
+     
+
+        <div style="display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    margin-bottom: 200px;">
+            <div style="width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        background-color: rgba(128, 112, 61, 0.329);">
+                        <p class="stud">Study Alone</p>
+                        <br>
+                        <p class="alone">أدرس بمفردك</p>
+            </div>
+            <hr style=" width: 100%; height: 1px; background-color: black; margin-top: 0 ; margin-bottom: 100px;">
+            <video src="{% static '/videos/room.mp4' %}" autoplay loop muted plays-inline class="video-background"></video>
+        </div>
+
+    </body>
+    {% endblock %}

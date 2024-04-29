@@ -1,0 +1,1329 @@
+.name{
+color: white;
+}
+#homebody{
+    
+   
+    
+   
+    background-color: lightgreen;
+   
+        
+
+    
+}
+
+
+
+
+#articlediv2{
+  word-wrap    : break-word;
+    overflow-wrap: break-word;
+    background-color:rgb(255,255,255);
+    margin-left: 0px;
+    margin-right: auto;
+    margin-top: 10px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+   
+    width: auto;
+    
+    height:auto;
+    border-radius: 40px;
+  
+
+}
+.postslist{
+  background-color:white;
+  word-wrap    : break-word;
+  overflow-wrap: break-word;
+  margin-left: 150px;
+  margin-top: 0px;
+  padding:20px;
+ 
+  width: 80%;
+  
+  height:auto;
+}
+#articletitle{
+  text-align: center;
+ 
+}
+#articledeletebutton{
+  background-color: red;
+  width: 150px;
+  height: 50px;
+}
+
+.menu-bar{
+    background:gray;
+   
+    border-style: groove;
+   
+    text-align: center;
+    width: 100%;
+    height:60px;
+    margin-bottom: 10px;
+    margin-left: 2px;
+}
+
+.menu-bar ul{
+    
+    
+      display: flex;
+    list-style: none;
+    color: black;
+}
+.menu-bar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 5px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color:white;
+}
+.active,.menu-bar ul li:hover
+{
+    background:orange;
+    border-radius : 3px;
+    height: auto;
+ 
+}
+
+.za
+{
+float: left;
+margin-top: 10px;
+}
+#myCarousel
+{
+float: left;
+margin-left: 10px;
+margin-top: 10px;
+
+}
+#myCarousele
+{
+float: left;
+margin-top: 10px;;
+margin-left : 30px;
+
+}
+.za{
+   background-color:lightblue;
+}
+.za ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ width: 200px;
+
+}
+
+.za li a {
+ display: block;
+ color:black;
+ padding: 8px 16px;
+ text-decoration: none;
+}
+
+/* Change the link color on hover */
+.za li a:hover {
+ background-color: rgb(85, 85, 85);
+ color: lightseagreen;
+}
+
+
+#myCarousel ul {
+ list-style-type: none;
+ 
+
+ 
+}
+#myCarousele ul {
+   list-style-type: none;
+   padding : 0px;
+   margin:0px;
+   width: 160px;
+   height: 500px;
+   
+ }
+
+
+  .card-image {
+    grid-area: image;
+  }
+  .card-text {
+    grid-area: text;
+    
+  }
+  .card-stats {
+    grid-area: stats; 
+  }
+
+  .card-deck {
+    display: inline-block;
+    text-align: center;
+}
+  
+  
+
+/* for file */
+#fileid {
+  
+  
+   
+    background:white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+   
+    text-align: center;
+    margin:20px;
+  }
+  .card-title{
+   
+    width: 100%;
+    height:30px;
+    color: black;
+   
+    
+  }
+
+
+
+  /* container-fluid*/
+
+
+  .card{
+    padding: 10px;
+   
+    border: 10px solid orange;
+    border-radius: 5px;
+    width: 300px;
+    height:200px;
+    background-color: gray;
+    
+   
+    grid-template-areas: "image" "text" "stats";
+    float:left;
+    font-family: roboto;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 0px;
+   
+    
+
+
+  
+    margin: 10px;
+  
+    border: 1px solid orange;
+   
+  
+    
+    justify-content: space-around;
+    
+  }
+  #filedetailbutton{
+    width: 200px;
+    color: black;
+    background-color: lightblue;
+    display: flex;  
+    justify-content: center;  
+    align-items: center; 
+  
+  }
+  #filedownloaddetail{
+    background-color: lightblue;
+    width: 200px;
+    display: flex;  
+    justify-content: center;  
+    align-items: center; 
+  }
+  .card-image {
+    grid-area: image;
+  }
+  .card-text {
+    grid-area: text;
+  }
+  .card-stats {
+    grid-area: stats; 
+  }
+
+  .card-image {
+    grid-area: image;
+    background: red;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+  }
+  .card-deck {
+    display: inline-block;
+    text-align: center;
+}
+#fileid{
+  float: left;
+  padding: 16px;
+  height:250px;
+  width: 245px;
+  text-align: center;
+}
+#filecontainer{
+float: left;
+}
+#fileuploadbtn{
+    background-color: blue;
+    width: 100px;
+}
+
+
+#videobody{
+    background-color: rgb(212,212,212);
+}
+
+#filebody{
+    background-color: lightblue;
+}
+
+#signupbody{
+    background-color: lightgreen;
+    background-color: brown;
+}
+#displayuserbody{
+    color:black;
+    background-color:rgb(212,212,212);
+}
+#userarticlebody{
+  background-color: rgb(212,212,212);
+}
+/* login and register */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.hero{
+    height: 100%;
+    width: 100%;
+  
+    background-position: center;
+   
+    position: absolute;
+    background-repeat:repeat ;
+ 
+}
+
+.form-box{
+    width: 380px;
+    height: 480px;
+    background:#fff;
+    position: relative;
+    margin: 6% auto;
+    padding:5px;
+    overflow: hidden;
+}
+.button-box{
+    width:220px;
+    margin:35px auto;
+    position:relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding:10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+
+}
+#btn{
+    top:0;
+    left:0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    border-radius: 30px;
+    transition: .5s;
+
+}
+.social-icons{
+    margin: 30px auto;
+    text-align: center;
+}
+.social-icons img{
+    width:30px;
+    margin : 0 12px;
+    box-shadow: 0 0 12px 0 #7f7f7f3d;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.input-group{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+
+}
+.input-field{
+    width: 100%;
+    padding:10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box{
+    margin:30px 10px 30px 0;
+}
+
+.span{
+    color:#777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+
+
+}
+
+#login{
+    left:50px;
+
+}
+#register{
+    left: 450px;
+
+}
+
+/* home page button */
+#homepage{
+    background-color: green;
+    width: 240px;
+    height: 40px;
+    position: absolute;
+}
+
+/* home page test*/
+body {
+	font-family: 'Poppins', sans-serif;
+  background-color: orange;
+}
+header .carousel-inner .item {
+	height: 100vh;
+}
+.navbar-inverse {
+	background-color: transparent;
+	border-color: transparent;
+}
+.navbar-inverse .navbar-brand {
+	color: #fff;
+	font-size: 30px;
+	padding: 40px 15px;
+	font-weight: 900;
+}
+.nav.navbar-nav.navbar-right {
+	margin: 10px 0;
+ 
+}
+.navbar-inverse .navbar-nav>li>a {
+	color: white;
+	text-transform: uppercase;
+}
+.banner {
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+.carousel-caption {
+	padding-bottom: 250px;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.carousel-caption h2 {
+	font-size: 70px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.carousel-caption h2 span {
+	color: #EDBB00;
+}
+.carousel-caption a {
+	background: #EDBB00;
+	padding: 15px 35px;
+	display: inline-block;
+	margin-top: 15px;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 25px;
+}
+.carousel-control.right {
+	background-image: none;
+}
+.carousel-control.left {
+	background-image: none;
+}
+.carousel-indicators .active {
+	background-color: #EDBB00;
+	border-color: #EDBB00;
+}
+/*responsive css*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.carousel-caption {
+		padding-bottom: 350px;
+	}
+	.carousel-caption h2 {
+		font-size: 50px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.navbar-inverse .navbar-brand {
+		font-size: 30px;
+		padding: 20px 15px;
+	}
+ 
+	.navbar-collapse {
+		background: rgba(0, 0, 0, 0.5);
+	}
+	.carousel-caption {
+		padding-bottom: 120px;
+	}
+	.carousel-caption h2 {
+		font-size: 25px;
+	}
+	.carousel-caption h3 {
+		font-size: 18px;
+	}
+	.carousel-caption a {
+		padding: 10px 25px;
+	}
+}
+
+
+/* login final */
+#bodylogin{font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(212,212,212);
+
+}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color:orange;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: orange;
+}
+
+
+
+
+#logincontainer {
+  padding: 16px;
+  margin-left: 400px;
+  margin-top: 80px;
+  background-color:rgb(234,234,234);
+  width: 450px;
+  height: 500px;
+}
+ 
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+/* register css form form and the body itself*/
+#registerbody {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:red;
+   
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Add padding to containers */
+  #registerid {
+    padding: 16px;
+   margin-left: 450px;
+    background-color:rgb(234,234,234);
+    margin-top: 20px;
+    width: 450px;
+    height: 800px;
+
+    
+  }
+  #registerbody{
+    background-color: rgb(212,212,212);
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: rgb(234,234,234);
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+   label{
+    color: black;
+   }
+    #p{
+    color : orange;
+   }
+   #registerid p ,h1{
+    color: orange;
+   }
+  /* Set a style for the submit button */
+  .registerbtn1 {
+    background-color:orange;
+    color: black;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .registerbtn:hover {
+    opacity: 1;
+  }
+  
+  /* Add a blue text color to links */
+  a {
+    color: black;
+  }
+  
+
+
+  /* contact css */
+
+  #contactbody {font-family: Arial, Helvetica, sans-serif;}
+  * {box-sizing: border-box;}
+  #contactbody{
+      background-color: lightgreen;
+  }
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  #coursebody{
+    background-color: lightblue;
+  }
+  #condactid {
+    border-radius: 5px;
+    background-color:green;
+    padding: 20px;
+    width: 400px;
+    height: 640px;
+    margin-left: 450px;
+    margin-top: 20px;
+  }
+  
+  .registerbtn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+    
+    .registerbtn:hover {
+      opacity: 1;
+    }
+
+    /* display posts css */
+    .displaypostsbody{
+        background-color: rgb(212,212,212);
+    }
+
+
+
+
+
+  .nav navbar-nav navbar-right li{
+    color: orange;
+  }
+    
+
+  /* course button */
+  .button1 {background-color:lightgreen;}
+  #coursesbutton {
+   
+    
+    padding: auto;
+    text-align-last: center;
+    width : 250px;
+    height:250px;
+    text-decoration:none;
+    
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    display: inline-flex;
+  }
+
+  #coursesbutton a{
+    color:black;
+  }
+  /* course details */
+  #bodycoursedetail{
+    background-color: rgb(212,212,212);
+  }
+  
+  #coursediv2{
+    word-wrap    : break-word;
+    overflow-wrap: break-word;
+    background-color:rgb(255,255,255);
+    margin-left: 0px;
+    margin-right: auto;
+    margin-top: 10px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+   
+    width: auto;
+    
+    height:auto;
+    border-radius: 40px;
+
+    
+    
+    
+  
+  }
+  #coursediv2 h2{
+    text-align: center;
+  }
+  /* courses list page cards */
+  #coursecardid {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "stats";
+  
+    border-radius: 18px;
+    background: gray;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+    margin:20px;
+  }
+  #coursecardid{
+    float: left;
+    padding: 16px;
+    height:300px;
+    width: 330px;
+    text-align: center;
+  }
+
+#coursebody{
+  background-color: lightblue;
+}
+
+/*new main page by ilyass*/
+.after-head{   
+  display: flex;
+  
+  flex-direction: column;
+  margin: 0;
+ 
+  
+  
+  
+  
+}
+
+.body{
+  margin: 0;
+  font-family:'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  margin-top: 130px;
+  background-image: url( 'static/image/ta3lim1.jpg');
+ 
+}
+
+/*head*/
+.head{
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: rgb(242, 242, 242);
+  height: 64.5px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+ 
+  
+}
+.logo-kaliim{
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 10px;
+}
+
+.Ka{
+  color: rgb(255, 191, 0);
+  font-size: 45px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: .3s;
+}
+.Ka:hover{
+  font-size: 50px;
+}
+
+
+
+
+
+/* main*/
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+.video-background{
+  padding: 0px;
+  width: 100%;
+  height:600px;
+  
+}
+
+
+.picture-bespeacker{
+  width: 90%;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.picturesrc{
+  width: 500px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+}
+.picturesrc:hover{
+  border-radius: 10px;
+  box-shadow: 0 0 30px grey;
+}
+
+.bespeacker,
+.bespeacker-arabic{
+  font-size: 100px;
+}
+
+
+.bespeacker-arabic{
+  font-family: Noto Naskh Arabic;
+  font-weight: 500;
+  direction: rtl;
+}
+.bespeacker{
+  font-family: fredoka;
+  font-weight: 500;
+}
+
+.storys{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+  gap: 2%;
+}
+
+.story{
+  height: 95%;
+  flex: 1;
+  border-radius: 30px;
+  background-color: rgb(21, 43, 8);
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
+  transition: .3s;
+}
+
+.story:hover{
+  box-shadow: 1px 1px 10px black;
+}
+
+.video-story{
+  width: 100%;
+
+}
+
+.create-story{
+  font-size: 150px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 900;
+  position: absolute;
+  top: 4200px;
+  right: 1000px;
+  z-index: -1;
+}
+
+.lesson-story-name{
+  margin-top: 10px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 50px;
+  font-family: fredoka;
+  font-weight: 500;
+  text-align: center;
+}
+.lesson-name{
+  cursor: pointer;
+  color: black;
+  text-decoration: underline rgba(255, 191, 0, 0);
+  text-underline-offset: 0px;
+  transition: .3s;
+  text-align: center;
+  font-size: 25px;
+}
+.lesson-name:hover{
+  color: rgb(255, 191,0);
+  text-decoration: underline rgb(255, 191,0);
+  text-underline-offset: 20px;
+}
+
+
+
+.pictures-storys{
+  width: 90%;
+  height: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2%;
+  margin-top: 300px;
+  margin-bottom: 0;
+}
+.pictures-storys2{
+  width: 95%;
+  height: 1000px;
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+  margin-bottom: 500px;
+}
+
+.create-story{
+  color: black;
+  animation: changeOpacity 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes changeOpacity {
+  0% { opacity: .05;
+       color: rgb(255, 191,0); }
+  25% { opacity: 1;
+        color: black;}
+  50%{ opacity: .05;
+        color: rgb(0, 0, 0);}
+  75%{ opacity: 1;
+        color:rgb(255, 191,0);}
+  100%{ opacity: .05;
+        color: rgb(255, 191,0);}
+}
+
+
+.picture-story{
+  width: 33%;
+  border-radius: 5px;
+  margin-bottom: 0;
+}
+
+.story1{
+  margin-top: -200px;
+}
+.story2{
+  margin-top: 500px;
+}
+.story3{
+  margin-top: -90px;
+}
+.story4{
+  
+  margin-top: -50px;
+}
+
+.story5{
+  
+  margin-top : -400px;
+}
+
+.story6{
+  
+  margin-top : -800px;
+}
+
+.image1{
+  width: 80%;
+  border-radius: 50px;
+}
+
+/*  footermain*/
+.footermain{
+  margin-top: 0px;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  background-color: lightgrey;
+ 
+  
+  border: 2px solid orange;
+}
+
+.footermain i{
+ width: 70px;
+size: 2em;
+ padding-top: 30px;
+
+}
+
+
+
+
+/*logo of facebook, insta, twitter, youtub*/
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+
+/*english courses Bac */
+.second-barre{
+  width: 100%;
+  height: 65px;
+  background-color:rgb(255, 255, 255);/*rgb(255, 255, 255)*/
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+  margin-top: -65px;
+}
+.second-barre2{
+  width: 100%;
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  margin: 0;
+}
+.second-barre2 li{
+  color: orange;
+}
+.element-second-barre{
+  text-decoration: underline rgba(255, 191, 0, 0);
+  text-underline-offset: 0;
+  color:black;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .3s;
+  margin: 0;
+}
+.element-second-barre:hover{
+  text-decoration: underline rgb(255, 191, 0);
+  text-underline-offset: 15px;
+  color:rgb(255, 191, 0);
+  font-size: 22.5px;
+  margin: 0;
+}
+
+.english-course{
+  text-decoration: underline rgb(255, 191, 0);
+  text-underline-offset: 15px;
+  color:rgb(255, 191, 0);
+  font-size: 22.5px;
+}
+
+/*main english courses*/
+.main-container{
+  background-color: rgb(212, 212, 212);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+margin-top: 0px;
+
+
+}
+
+/* i added numbers to half*/
+.bacTitle{
+  margin-top: 0;
+  margin-bottom: 0;
+  width:140px;
+  height: 75px; 
+  width: 100%;
+  background-color: black;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  }
+
+  .videoparent{
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      margin-top: 0px;
+      margin-left:auto;
+      margin-right: auto;
+      flex-wrap: wrap;
+    
+  }
+  .container{
+      background-color: rgb(234, 234, 234);
+      box-shadow: -3px -3px 15px;
+      
+      height: 90%;
+      border-radius: 15px;
+    
+      display:flex;
+      
+        
+    
+     
+      align-items: center;
+      padding-bottom: 50px;
+      padding: 10px; /* Example padding */
+      box-sizing: border-box;
+      margin-top:10px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 15px;
+      width: 95%;
+      flex-wrap: wrap;
+     
+    
+      
+  }
+ .container td h1{
+  text-align: center;
+ }
+  .video{
+      width: 48%;
+      height: 10px;
+      border-radius: 10px;
+      display:flex ;
+     
+     margin-top: 20px;
+     margin-bottom: 20px;
+     flex-wrap: wrap;
+    
+  }
+  
+  .myvideo{
+      background-color: rgb(170, 170, 170);
+      width: 100%;
+      height: 220px;
+      border-radius: 10px;
+      box-shadow: 0 0 2.5px;
+      cursor: pointer;
+
+     
+      
+  }
+  .videotitle{
+      width: 10%;
+      height: auto;
+      padding-left: 10px;
+      padding-top: 10px;
+      font-size: 11.5px;
+      font-family:Arial, Helvetica, sans-serif;
+      letter-spacing: 0.5px;
+      line-height: 10px;
+      cursor: pointer;
+  }
+  .imgandtitle{
+    width: 70%;
+    height: 120pxpx;
+  }
+  .category-video{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .category{
+      width: 300px;
+      height: 1880px;
+      background-color: rgb(206, 206, 206);
+      border-right:1.5px solid black;
+      margin-right: 35px;
+      border-top-left-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      transition: .2s;
+  }
+  .category:hover{
+      width: 700px;
+  }
+  .text-category{
+      font-size: 30px;
+      padding: 15px;
+      font-family: inherit;
+      color: rgb(237, 178, 0);
+      font-weight: bold;
+      cursor: pointer;
+      transition: .3s;
+  }
+  .text-category:hover{
+      background-color: rgb(102, 102, 102);
+  }
+  .bactextcat{
+      border-top-left-radius: 15px;
+  }
+  .comunication::before{
+      content: "comm.";
+  }
+ .category:hover .comunication::before{
+      content: "communication";
+  }
