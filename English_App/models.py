@@ -87,8 +87,7 @@ class AddCourseModel(models.Model):
     
     courseName = models.CharField(max_length = 50)
     courseBody = RichTextField(blank=True,null=True)
-    courseImage = models.ImageField(upload_to='images/%y', default='default_image.jpg')
-    instructorImage = models.ImageField(upload_to='images/%y', default='default_image.jpg')
+   
     #courseBody = models.TextField()
     def __str__(self):
         return self.courseName
