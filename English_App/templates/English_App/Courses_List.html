@@ -1,34 +1,206 @@
-{% extends 'English_App/basic.html' %}
+
+{% extends 'English_App/index2.html' %}
 {% load static %}
 {% block content %}
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link  rel="stylesheet" type="text/css"  href="{% static '/css/test.css' %}">
+  {% load static %}
+  <link rel="stylesheet" href="../Css/general-body.css">
+  <link rel="stylesheet" href="../Css/head.css">
+  <link rel="stylesheet" href="../Css/english course/englishCourseSecondBarre.css">
+  <link rel="stylesheet" href="../Css/after-head.css">
+  <link rel="stylesheet" href="../Css/english course/mainEnglishcourse.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.typekit.net/zsj8zhv.css">
+  <link rel="stylesheet" href="https://use.typekit.net/cgq4uuv.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link  rel="stylesheet" type="text/css"  href="{% static '/css/test.css' %}">
+  <link  rel="stylesheet" type="text/css"  href="{% static '/images' %}">
+  <meta charset="UTF-8">
     <title>Courses</title>
+
+    <style>
+      a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 3px 6px;
+      }
+      
+      a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      .previous {
+        background-color: #f1f1f1;
+        color: black;
+      }
+      
+      .next {
+        background-color: orange;
+        color: white;
+      }
+      
+      .round {
+        border-radius: 15%;
+      }
+
+
+
+
+
+      #coursedeletebutton1{
+        width: 100px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2px;
+        margin-bottom: 2px;
+      }
+      #courseslistcontainer{
+        background-color: rgb(234, 234, 234);
+      box-shadow: -3px -3px 15px;
+      
+      height: 90%;
+      border-radius: 15px;
+    
+      display:flex;
+      
+        
+    
+     
+      align-items: center;
+      padding-bottom: 50px;
+      padding: 10px; /* Example padding */
+      box-sizing: border-box;
+      margin-top:10px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 15px;
+      width: 95%;
+      flex-wrap: wrap;
+      }
+ 
+      
+    </style>
 </head>
 <body id="coursebody">
    
-    {% for x in courses %}
-    <div class="card" id="coursecardid">
-          
-          
+ 
+  
+  <div class="main-container">
+            
+    <div class="container" id="courseslistcontainer">
+        <div class="category-video">
+            <div class="category">
+                <a class="text-category bactextcat" style="text-decoration: underline; text-underline-offset: 10px; background-color: rgb(150, 150, 150);" >
+                    Bac
+                </a>
+                <hr style="background-color: black;
+                            width: 100%;
+                            height: 3px;
+                            border-style: solid;">
+                <a href="{% url 'courseDetail' %}" class="text-category" style="text-decoration: none;">
+                    English For <abbr title="communication" style="text-decoration: none;" class="comunication"></abbr>
+                </a>
+                
+                <hr style="background-color: black;
+                width: 100%;
+                height: 3px;
+                border-style: solid;">
+                
+
+            </div>
+            
         
-        <div class="card-body">
-          <br>
-          <br>
-            <h2> <a href="{% url 'displayeachcourse' x.id %}">{{x.courseName}}</a></h2><br>
-            <br>
-            <br>
-            {% if user.is_authenticated and user.is_staff and user.is_superuser%}
-          <a class="btn btn-sm btn-danger" id="videodeletebutton" href="{% url 'deleteCourse' x.id %}"><span class="glyphicon glyphicon-trash"></span>Delete</a>
-        {% endif %}
+            <div style="display: grid;
+                        flex-direction: column;
+                        margin-left: 20px;
+                        width:100%;">
+                        
+
+
+
+
+                        <div class="videoparent">
+                          {% for x in courses %}
+                            <div class="video">
+                              <a href="{% url 'displayeachcourse' x.id %}">
+                                <img src="{% static '/images/london2.jpg' %}" class="myvideo"></a>
+                                
+                                <div class="imgandtitle" style="display: grid;
+                                                                
+                                                                align-items: center;
+                                                                border: 2px solid rgb(0, 0, 0);
+                                                                border-radius: 15px;
+                                                                background-color: rgb(213, 209, 203);">
+                                    <img src="{{ x.courseImage.url }}" alt="{{x.courseName}}" width="30px" height="25px" class ="picture" style="border-radius: 25px; margin-left: 10px;">
+                                    
+                                   
+                                    
+                                    <div class="videotitle">{{x.courseName}}<br>
+                                    
+                                    </div>
+                                    {% if user.is_authenticated and user.is_staff and user.is_superuser%}
+                                    <a class="btn btn-sm btn-danger" id="coursedeletebutton1" href="{% url 'deleteCourse' x.id %}"><span class="glyphicon glyphicon-trash"></span>Delete</a>
+                                  {% endif %}
+                                </div>
+                              
+                            </div>
+                            {% endfor %} 
+
+
+
+
+                            
+
+                           
+
+                               
+                        </div>
+
+                       
+
+
+                      
+                    </div>
+
+
+                    
+                   
         </div>
-      </div>
-      {% endfor %}
+        
+      
+
+                   
+    </div>
+
+    <div>
+      <a href="#" class="previous">&laquo; Previous</a>
+      <a href="#" class="next">Next &raquo;</a>
+      
+      <a href="#" class="previous round">&#8249;</a>
+      <a href="#" class="next round">&#8250;</a>  
+     </div>
+ 
+  
+  </div>
+ 
+
+
+
+
+
+
+
+  
 </body>
 </html>
 {% endblock %}
