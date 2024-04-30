@@ -25,7 +25,7 @@ from django.views.generic.base import TemplateView
 urlpatterns = [
      path('ckeditor/', include('ckeditor_uploader.urls')),
     path('admin/', admin.site.urls),
-    path('English_App', include('English_App.urls')),
+    path('', include('English_App.urls')),
     path("English_App/", include("django.contrib.auth.urls")),
      path('login/', auth_views.LoginView.as_view(template_name='English_App/login.html'), name='login'),
      path('logout/', auth_views.LogoutView.as_view(template_name='English_App/logout.html'), name='logout'),
