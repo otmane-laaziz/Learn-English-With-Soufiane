@@ -69,7 +69,10 @@
               {% endif %}
               {% if user.is_authenticated %}
               <li>Hello,{{user.first_name}}</li>
-              <a href="{% url 'logout' %} " class="element-second-barre">Logout</a>
+              <form method="POST" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">logout</button>
+            </form>
               {% else %}
               <a href="{% url 'register' %}" class="element-second-barre">
                 Register
